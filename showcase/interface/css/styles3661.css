@@ -1,0 +1,267 @@
+/**************************
+	RESET 
+***************************/
+	
+	@import 'https://fonts.googleapis.com/css?family=Heebo:400,500';
+
+	body {
+		font-family: 'Heebo', sans-serif;
+		background-color: #f7f7f7;
+		font-size: 2.5vw;
+		line-height: 1.05;
+		color: #1f1e1d;
+	}
+
+	*::selection {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	*:focus {
+		outline: 0;
+	}
+
+	p {
+		margin: 0;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	a:link,
+	a:visited,
+	a:hover,
+	a:active {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		font-weight: normal;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	label {
+		font-weight: normal;
+	}
+
+	input,
+	button {
+		font-family: inherit;
+	}
+
+	button {
+		cursor: pointer;
+	}
+	
+	::-webkit-input-placeholder { color: #999999; }
+	::-moz-placeholder { color: #999999; }
+	:-ms-input-placeholder { color: #999999; }
+	:-moz-placeholder { color: #999999; }
+
+	::-webkit-scrollbar-track	{
+		background-color: rgba(0, 0, 0, 0.07);
+	}
+
+	::-webkit-scrollbar	{
+		width: 12px;
+		height: 12px;
+		background-color: rgba(0, 0, 0, 0.07);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.15);
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+  
+	
+/**************************
+	GLOBALS
+***************************/
+
+	.fullheight {
+		height: 100%;
+	}
+
+	header {
+		padding: 30px 0 50px;
+		font-size: 0;
+	}
+
+	.social {
+		font-size: 15px;
+		color: #1f1e1d;
+	}
+
+	.mycontainer {
+		padding: 0 50px;
+	}
+
+	.row40 {
+		margin-right: -20px;
+		margin-left: -20px;
+	}
+
+	.row40 > div {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.logo img {
+		width: 120px;
+	}
+
+	.title {
+		font-weight: bold;
+		padding-top: 30px;
+		padding-left: 20px;
+	}
+
+	.mycard {
+		display: block;
+		height: 10vw;
+		padding: 20px;
+		margin-bottom: 40px;
+		text-align: center;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+		transform-style: preserve-3d;
+		transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+	}
+
+	.mycard-content {
+		transform-style: preserve-3d;
+		transform: translateZ(50px);
+	}
+	
+	.mycard-1-1 { background-color: #ffffff; }
+	.mycard-1-2 { background-color: #bf9b30; }
+	.mycard-1-3 { background-color: #000000; }
+	.mycard-1-4 { background-color: #0056a8; }
+	
+	.mycard-2-1 { background-color: #152744; }
+	.mycard-2-2 { background-color: #ffffff; }
+	.mycard-2-3 { background-color: #d3262b; }
+	.mycard-2-4 { background-color: #efab00; }
+	
+	.mycard-3-1 { background-color: #ffffff; }
+	.mycard-3-2 { background-color: #000000; }
+	.mycard-3-3 { background-color: #ffffff; }
+	.mycard-3-4 { background-color: #000000; }
+	
+	.mycard-4-1 { background-color: #23d3c6; }
+	.mycard-4-2 { background-color: #003263; }
+	.mycard-4-3 { background-color: #eb2d2e; }
+	.mycard-4-4 { background-color: #ffffff; }
+	
+	.mycard-5-1 { background-color: #1d403c; }
+	.mycard-5-2 { background-color: #292b2c; }
+	.mycard-5-3 { background-color: #ffffff; }
+	.mycard-5-4 { background-color: #ef4431; }
+
+	.mycard-6-1 { background-color: #006EFC; }
+	.mycard-6-2 { background-color: #f6a2b4; }
+	.mycard-6-3 { background-color: #2f313e; }
+	.mycard-6-4 { background-color: #88b33f; }
+
+	
+/**************************
+	MEDIA QUERIES
+***************************/
+
+	/* 1200 */
+	@media (max-width: 1199px) {
+		body {
+			font-size: 3.5vw;
+		}
+		.title {
+			padding-left: 0;
+		}
+		.mycard {
+			height: 16vw;
+		}
+		.mycard-content {
+			height: 100%;
+		}
+		.mycard-content::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+		.mycard img {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			vertical-align: middle;
+		}
+	}
+
+	/* 992 */
+	@media (max-width: 991px) {
+		.row40 {
+			margin-right: -10px;
+			margin-left: -10px;
+		}
+		.row40 > div {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.mycard {
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+	}
+
+	/* 768 */
+	@media (max-width: 767px) {
+		body {
+			font-size: 4vw;
+		}
+		header {
+			padding-bottom: 20px;
+		}
+		.title {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.mycard {
+			height: 22vw;
+		}
+	}
+
+	/* 576 */
+	@media (max-width: 575px) {
+		body {
+			font-size: 30px;
+		}
+		.mycard {
+			height: 190px;
+			max-width: 400px;
+			margin: 0 auto 20px;
+		}
+		.mycontainer {
+			padding: 0 20px;
+		}
+	}
+
+	/* 480 */
+	@media (max-width: 479px) {
+		body {
+			font-size: 7vw;
+		}
+		.mycard {
+			height: 40vw;
+		}
+	}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.annanuna.co.il/bnr/selected/partner/300x250/300x250.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2020 19:19:05 GMT -->
+<head>
+<meta charset="UTF-8">
+<title>300x250</title>
+<meta name="ad.size" content="width=300,height=250">
+
+
+<script src="createjs-2015.11.26.min.js"></script>
+<script src="300x250.js"></script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib._300x250();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+
+</script>
+
+<!-- write your code here -->
+
+</head>
+<body onload="init();" style="background-color:#D4D4D4;margin:0px;">
+	<canvas id="canvas" width="300" height="250" style="background-color:#FFFFFF"></canvas>
+</body>
+
+<!-- Mirrored from www.annanuna.co.il/bnr/selected/partner/300x250/300x250.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2020 19:19:11 GMT -->
+</html>
